@@ -9,6 +9,8 @@ Application en ligne de commande qui, à travers le nom utilisateur retourne les
 
 ## Contributors
 
-* [Olivier Yao](https://github.com/paulbouaffou) - Project Lead
+* [Olivier Yao](https://github.com/yjolivier) - Project Lead
+* [Paul Bouaffou](https://github.com/paulbouaffou) - Contributor
+
 ## License
 This project is open source and available under the [MIT License](LICENSE).
