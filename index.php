@@ -13,11 +13,16 @@
 	*/
 
 	//Presentation des projets wikis sélectionnées pour l'affichage des contributions
-	echo "Bienvenu sur l'application dénommée 'media-wiki-contribution' !!!\n";
+	echo "\n Bienvenu sur l'application dénommée 'media-wiki-contribution' !!!\n";
+
+	echo "\n";
 
 	echo "NB: Cette application concerne uniquement les contributeurs des projets WIKI en langue française et vos contributions se listeront en fonction de la postion des projets suivants: \n";
-	
+	echo "\n";
+
 	echo "WIKIPEDIA   |   wIKIMEDIA COMMONS   |   WIKIQUOTE   |   WIKIDATA   |   WIKITIONNAIRE   \n";
+
+	echo "\n";
 
 	// Saisie du username
 	echo "Veuillez renseignez votre username : ";
