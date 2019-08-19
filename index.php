@@ -12,23 +12,30 @@
 
 	*/
 
+	//Presentation des projets wikis sélectionnées pour l'affichage des contributions
+	echo "Bienvenu sur l'application dénommée 'media-wiki-contribution' !!!\n";
+
+	echo "NB: Cette application concerne uniquement les contributeurs des projets WIKI en langue française et vos contributions se listeront en fonction de la postion des projets suivants: \n";
+	
+	echo "WIKIPEDIA   |   wIKIMEDIA COMMONS   |   WIKIQUOTE   |   WIKIDATA   |   WIKITIONNAIRE   \n";
+
 	// Saisie du username
-	echo "Veuillez renseigner votre nom d'utilisateur \n";
+	echo "Veuillez renseignez votre username : ";
 	$username = readline();
 
 	// Tableau numéroté 1 de lien des projets WIKI
-	$project_wiki_name = array('fr.wikipedia.org', 'commons.wikimedia.org', 'fr.wikiquote.org', 'wikidata.org', 'fr.wiktionary.org');
+	$project_wiki_link = array('fr.wikipedia.org', 'commons.wikimedia.org', 'fr.wikiquote.org', 'wikidata.org', 'fr.wiktionary.org');
 
 	// Tableau numéroté 2 de nom des projets WIKI
-	$project_wiki_link = array('Wikipedia', 'Wikimedia Commons', 'Wikiquote', 'Wikidata', 'Wikitionnaire');
+	// $project_wiki_name = array('Wikipedia', 'Wikimedia Commons', 'Wikiquote', 'Wikidata', 'Wikitionnaire');
 
 	// Découpage de l'URL
 
-	$link_1 = 'https://';
+	$link_1 = "https://";
 
-	$link_2 = '/w/api.php?action=query&format=json&list=users&ususers=';
+	$link_2 = "/w/api.php?action=query&format=json&list=users&ususers=";
 
-	$link_3 = '&usprop=editcount';
+	$link_3 = "&usprop=editcount";
 
 	// Variable qui regroupera tous les éléments de l'URL ci-dessus
 	$link_all = NULL;
@@ -37,7 +44,7 @@
 	for ($link_wiki=0; $link_wiki < 5; $link_wiki++) {
 
 		// Formation de l'URL
-		$link_all = $link1.$project_wiki_link[$link_wiki].$link2.urlencode($username).$link3;
+		$link_all = $link_1.$project_wiki_link[$link_wiki].$link_2.urlencode($username).$link_3;
 
 		// Recuperation du contenu du lien pour le mettre dans une variable $link_content 
 		$link_content = file_get_contents($link_all); 
@@ -47,19 +54,16 @@
 
 		// Vérification de l'existence des paramètres "query" & "users"
 		if (isset($contributions["query"]["users"])) {
-
-			// Boucle faisant l'alternance des éléments du tableau numéroté 2 afin d'afficher chaque nom de projet wiki.
-			for ($name_wiki=0; $name_wiki < 5; $name_wiki++) { 
 				
-				foreach ($contributions["query"]["users"] as $content) {
+			foreach ($contributions["query"]["users"] as $content) {
 
-					// Affichage du nombre de contributions de l'utilisateur
-					echo "\n Vous avez" . $content["editcount"] ." contribution(s) en  " . project_wiki_name[$name_wiki] . "\n";
+				// Affichage du nombre de contributions de l'utilisateur
+				echo "\n Vous avez " . $content["editcount"] ." contribution(s)\n";
 
 					echo "\n";
-				}
-
 			}
+
+			
 
 		}
 
