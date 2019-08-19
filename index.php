@@ -3,15 +3,15 @@
 	/*
 
 	 ######################################################################################################
-	 #																									  #
-	 # 	Auteurs: Jean Olivier Yao & Paul Bouaffou ;														  #
-	 #																									  #
-	 #  Description: Programme donnant le nombre de contributions d'un utilisateur						  #
-	 #				 sur les Projets WIKI en langue française (Exemples: Wikipédia, Wikimedia Commons,	  #
-	 #				 Wikiquote, Wikidata, Wikitionnaire, ...). [NB]: Il s'exécute en ligne de commande ;  #
-	 #																									  #
-	 # 	Licence: MIT ;																					  #
-	 #																									  #
+	 #												      #												  #
+	 #  Auteurs: Jean Olivier Yao & Paul Bouaffou ;						              #
+	 #												      #												  #
+	 #  Description: Programme donnant le nombre de contributions d'un utilisateur		              #
+	 #               sur les Projets WIKI en langue française (Exemples: Wikipédia, Wikimedia Commons,    #
+	 #               Wikiquote, Wikidata, Wikitionnaire, ...). [NB]: Il s'exécute en ligne de commande ;  #
+	 #												      #												  #
+	 #  Licence: MIT ;									              #
+	 #												      #												  #
 	 ######################################################################################################
 
 	*/
@@ -61,7 +61,7 @@
 			foreach ($contributions["query"]["users"] as $content) {
 
 				// Affichage du nombre de contributions de l'utilisateur
-				echo "\n Vous avez " . $content["editcount"] ." contribution(s) en  " . $project_wiki_name[$link_wiki] . "\n\n";
+				echo "\n Vous avez ".$content["editcount"]." contribution(s) en  ".$project_wiki_name[$link_wiki]."\n\n";
 
 			}	
 
