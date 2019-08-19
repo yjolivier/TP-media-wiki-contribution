@@ -2,45 +2,43 @@
 
 	/*
 
-	 * Auteurs: Jean Olivier Yao & Paul Bouaffou ;
-
-	 * Description: Programme donnant le nombre de contributions d'un utilisateur
-	 				sur les Projets WIKI en langue française (Exemples: Wikipédia, Wikimedia Commons,
-	 				Wikiquote, Wikidata, Wikitionnaire, ...). [NB]: Il s'exécute en ligne de commande ; 
-
-	 * Licence: MIT ;
+	 ######################################################################################################
+	 #																									  #
+	 # 	Auteurs: Jean Olivier Yao & Paul Bouaffou ;														  #
+	 #																									  #
+	 #  Description: Programme donnant le nombre de contributions d'un utilisateur						  #
+	 #				 sur les Projets WIKI en langue française (Exemples: Wikipédia, Wikimedia Commons,	  #
+	 #				 Wikiquote, Wikidata, Wikitionnaire, ...). [NB]: Il s'exécute en ligne de commande ;  #
+	 #																									  #
+	 # 	Licence: MIT ;																					  #
+	 #																									  #
+	 ######################################################################################################
 
 	*/
 
-	//Presentation des projets wikis sélectionnées pour l'affichage des contributions
-	echo "\n Bienvenu sur l'application dénommée 'media-wiki-contribution' !!!\n";
+	// Presentation succincte de l'application
+	echo "\nBienvenu(e) sur l'application dénommée 'media-wiki-contribution' !!!\n";
 
-	echo "\n";
+	// Précision de la langue utlisé pour une meilleure affichage des contributions
+	echo "NB: Cette application concerne uniquement les contributeurs des projets WIKI en langue française. \n\n";
 
-	echo "NB: Cette application concerne uniquement les contributeurs des projets WIKI en langue française et vos contributions se listeront en fonction de la postion des projets suivants: \n";
-	echo "\n";
-
-	echo "WIKIPEDIA   |   wIKIMEDIA COMMONS   |   WIKIQUOTE   |   WIKIDATA   |   WIKITIONNAIRE   \n";
-
-	echo "\n";
-
-	// Saisie du username
+	// Renseignement du nom d'utilisateur sur les projets WIKI
 	echo "Veuillez renseignez votre username : ";
 	$username = readline();
 
-	// Tableau numéroté 1 de lien des projets WIKI
+	// Tableau de lien des projets WIKI
 	$project_wiki_link = array('fr.wikipedia.org', 'commons.wikimedia.org', 'fr.wikiquote.org', 'wikidata.org', 'fr.wiktionary.org');
 
-	// Tableau numéroté 2 de nom des projets WIKI
-	// $project_wiki_name = array('Wikipedia', 'Wikimedia Commons', 'Wikiquote', 'Wikidata', 'Wikitionnaire');
+	// Tableau de nom des projets WIKI
+	$project_wiki_name = array('Wikipedia', 'Wikimedia Commons', 'Wikiquote', 'Wikidata', 'Wikitionnaire');
 
 	// Découpage de l'URL
 
-	$link_1 = "https://";
+	$link_1 = "https://";   // Hôte
 
-	$link_2 = "/w/api.php?action=query&format=json&list=users&ususers=";
+	$link_2 = "/w/api.php?action=query&format=json&list=users&ususers=";   //  Paramètre de l'URL
 
-	$link_3 = "&usprop=editcount";
+	$link_3 = "&usprop=editcount";   // Paramètre de l'URL
 
 	// Variable qui regroupera tous les éléments de l'URL ci-dessus
 	$link_all = NULL;
@@ -63,17 +61,12 @@
 			foreach ($contributions["query"]["users"] as $content) {
 
 				// Affichage du nombre de contributions de l'utilisateur
-				echo "\n Vous avez " . $content["editcount"] ." contribution(s)\n";
+				echo "\n Vous avez " . $content["editcount"] ." contribution(s) en  " . $project_wiki_name[$link_wiki] . "\n\n";
 
-					echo "\n";
-			}
-
-			
+			}	
 
 		}
 
 	}
-
-	/*var_dump(json_decode($link_content, true)) ;*/
 
 ?>
