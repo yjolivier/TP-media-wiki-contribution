@@ -1,18 +1,16 @@
 <?php
 
 	/*
+		 
+	 												      												  
+	* @auteurs: Jean Olivier Yao & Paul Bouaffou ;						              
+	 												      												  
+	* @description: Programme donnant le nombre de contributions d'un utilisateur		              
+	                sur les Projets WIKI en langue française (Exemples: Wikipédia, Wikimedia Commons,    
+	                Wikiquote, Wikidata, Wikitionnaire, ...). [NB]: Il s'exécute en ligne de commande ;  
+	 												      											  
+	* @licence: MIT ;									
 
-	 ######################################################################################################
-	 #												      #												  #
-	 #  Auteurs: Jean Olivier Yao & Paul Bouaffou ;						              #
-	 #												      #												  #
-	 #  Description: Programme donnant le nombre de contributions d'un utilisateur		              #
-	 #               sur les Projets WIKI en langue française (Exemples: Wikipédia, Wikimedia Commons,    #
-	 #               Wikiquote, Wikidata, Wikitionnaire, ...). [NB]: Il s'exécute en ligne de commande ;  #
-	 #												      #												  #
-	 #  Licence: MIT ;									              #
-	 #												      #												  #
-	 ######################################################################################################
 
 	*/
 
