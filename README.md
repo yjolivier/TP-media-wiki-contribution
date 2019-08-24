@@ -1,4 +1,5 @@
 # user-contribution-wiki
+---------------------------------------------------------------------------------------------------------------------------------------
 
 Application (en ligne de commande) listant le nombre de contributions d'un utilisateur sur maints **projets WIKI** en langue française.
 Les **projets WIKI** sélectionnés sont:
@@ -8,18 +9,18 @@ Les **projets WIKI** sélectionnés sont:
 * [Wikidata](https://wikidata.org)
 * [Wiktionnaire](https://fr.wiktionary.org)
 
-*NB: Cet outil est un travail pratique pour la première séance de la formation des développeurs en langage PHP*
+*NB: Cet outil est un travail pratique pour la première séance de la formation des développeurs en langage PHP.*
 
-## Les fonctions php utiles pour l'application de ce tp
+## Les fonctions php utiles pour la réalisation du travail pratique
 
 - `urlencode()`: Permet de pouvoir encoder une chaîne en url
 - `file_get_content()`: Lit tout un fichier dans une chaîne
 - `json_decode()`: Décode une chaîne JSON.
 
-## Contributors
+## Contributeurs
 
-* [Olivier Yao](https://github.com/yjolivier) - Project Lead
-* [Paul Bouaffou](https://github.com/paulbouaffou) - Contributor
+* [Olivier Yao](https://github.com/yjolivier) - Chef du projet
+* [Paul Bouaffou](https://github.com/paulbouaffou) - Contributeur
 
-## License
+## Licence
 This project is open source and available under the [MIT License](LICENSE).
