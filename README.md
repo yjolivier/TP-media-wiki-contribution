@@ -11,7 +11,7 @@ Les **projets WIKI** sélectionnés sont:
 
 *NB: Cet outil est un travail pratique pour la première séance de la formation des développeurs en langage PHP.*
 
-## Les fonctions php utiles pour la réalisation du travail pratique
+## Les fonctions php utiles pour la réalisation de ce travail pratique(tp)
 
 - `urlencode()`: Permet de pouvoir encoder une chaîne en url
 - `file_get_content()`: Lit tout un fichier dans une chaîne
