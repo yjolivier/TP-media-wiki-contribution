@@ -23,4 +23,4 @@ Les **projets WIKI** sélectionnés sont:
 * [Paul Bouaffou](https://github.com/paulbouaffou) - Contributeur
 
 ## Licence
-This project is open source and available under the [MIT License](LICENSE).
+Ce projet est open source et disponible sous la [licence MIT](LICENSE).
