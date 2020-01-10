@@ -1,14 +1,26 @@
-# TP-media-wiki-contribution
-Application en ligne de commande qui, à travers le nom utilisateur retourne les contributions de celui-ci
+# user-contribution-wiki
+---------------------------------------------------------------------------------------------------------------------------------------
 
-## Les fonctions php utiles pour l'application de ce tp
+Application (en ligne de commande) listant le nombre de contributions d'un utilisateur sur maints **projets WIKI** en langue française.
+Les **projets WIKI** sélectionnés sont:
+* [Wikipédia](https://fr.wikipedia.org)
+* [Wikimedia Commons](https://commons.wikimedia.org)
+* [Wikiquote](https://fr.wikiquote.org)
+* [Wikidata](https://wikidata.org)
+* [Wiktionnaire](https://fr.wiktionary.org)
 
-- urlencode() :Permet de pouvoir encoder une chaîne en url
-- file_get_content() : Lit tout un fichier dans une chaîne
-- json_decode(): Décode une chaîne JSON.
+*NB: Cet outil est un travail pratique pour la première séance de la formation des développeurs en langage PHP.*
 
-## Contributors
+## Les fonctions php utiles pour la réalisation de ce travail pratique(tp)
 
-* [Olivier Yao](https://github.com/paulbouaffou) - Project Lead
-## License
-This project is open source and available under the [MIT License](LICENSE).
+- `urlencode()`: Permet de pouvoir encoder une chaîne en url
+- `file_get_content()`: Lit tout un fichier dans une chaîne
+- `json_decode()`: Décode une chaîne JSON.
+
+## Contributeurs
+
+* [Olivier Yao](https://github.com/yjolivier) - Chef du projet
+* [Paul Bouaffou](https://github.com/paulbouaffou) - Contributeur
+
+## Licence
+Ce projet est open source et disponible sous la [licence MIT](LICENSE).
